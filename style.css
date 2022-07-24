@@ -1,0 +1,74 @@
+body {
+    background: rgb(24,2,1);
+    background: linear-gradient(243deg, rgba(24,2,1,1) 0%, rgba(83,13,10,1) 48%, rgba(0,0,0,1) 100%);
+    margin: 0.5rem;
+    font-family: 'Play', sans-serif;
+    height: 100vh
+}
+h1 {
+    font-size: 60px;
+    background: -webkit-linear-gradient(90deg, rgba(253,255,0,1) 0%, rgba(255,128,0,1) 48%, rgba(255,0,0,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: tomato;  
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+    width: 20ch;
+    border-right: 1px solid;
+    animation: typing 3.5s steps(30),
+    blink .5s infinite step-end alternate;
+    overflow: hidden;
+    margin: 2rem auto;
+    text-shadow: 0 0 10px rgb(255, 102, 0);
+    padding: 0.5rem;
+}
+@keyframes typing {
+    from { width: 0 }
+}
+@keyframes blink {
+    50% { border-color: transparent }
+}
+label {
+    display: block;
+    margin: 0.5rem auto;
+    color: orange;
+    font-size: 40px;
+    text-shadow: 0 0 10px rgb(255, 102, 0);;
+
+}
+#translatorContainer {
+    background-color: rgba(31, 3, 2, 0.5);
+    border-radius: 0.3rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+#inputMorse, #outputMorse {
+    border-radius: 0.3rem;
+    width: 600px;
+    height: 400px;
+    resize: none;
+    font-size: 30px;
+    font-family: 'Play', sans-serif;
+    overflow: auto;
+    background-color: wheat;
+    color: rgb(124, 61, 32);
+    box-shadow: 0 0 10px rgb(255, 102, 0);
+    outline: none;
+    padding: 0.5rem;
+}
+#inputMorse::placeholder {
+    font-size: 30px;
+    color: brown;
+    
+}
+#outputMorse {
+    font-size: 30px;
+}
+#outputMorse::placeholder {
+    color: brown;
+}
