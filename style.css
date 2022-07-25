@@ -1,12 +1,10 @@
 body {
     background: rgb(24,2,1);
     background: linear-gradient(243deg, rgba(24,2,1,1) 0%, rgba(83,13,10,1) 48%, rgba(0,0,0,1) 100%);
-    margin: 0rem;
     font-family: 'Play', sans-serif;
-    height: 140vh;
+    height: 100vh;
 }
 h1 {
-    font-size: 80px;
     background: -webkit-linear-gradient(90deg, rgba(253,255,0,1) 0%, rgba(255,128,0,1) 48%, rgba(255,0,0,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -14,7 +12,10 @@ h1 {
     text-align: center;
     white-space: nowrap;
     display: block;
-    width: 20ch;
+    text-align: center;
+    white-space: nowrap;
+    display: block;
+    width: 19ch;
     border-right: 1px solid;
     animation: typing 3.5s steps(30),
     blink .5s infinite step-end alternate;
@@ -22,41 +23,42 @@ h1 {
     margin: 2rem auto;
     text-shadow: 0 0 10px rgb(255, 102, 0);
     padding: 1rem;
+    font-size: 60px;
 }
 @keyframes typing {
     from { width: 0 }
 }
 @keyframes blink {
     50% { border-color: transparent }
+
 }
 label {
     display: block;
-    margin: 0.5rem auto;
+    margin: 0 auto;
+    padding: 0.5rem;
     color: orange;
     font-size: 40px;
-    text-shadow: 0 0 10px rgb(255, 102, 0);;
+    text-shadow: 0 0 10px rgb(255, 102, 0);
 
 }
 #translatorContainer {
     background-color: rgba(95, 37, 14, 0.6);
-    max-width: 55rem;
-    padding: 2rem 0 4rem 0;
-    margin: 0 auto 15rem auto;
+    padding-bottom: 1rem;
+    margin: 0 auto;
     border-radius: 0.3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
+    text-align: center;
+    width: 90%;
 }
 #inputMorse, #outputMorse {
+    border: none;
     border-radius: 0.3rem;
-    width: 45rem;
-    height: 25rem;
     resize: none;
+    width: 70%;
+    height: 20rem;
     font-size: 30px;
     font-family: 'Play', sans-serif;
     overflow: auto;
+    margin:  0 1rem;
     background-color: wheat;
     color: rgb(124, 61, 32);
     box-shadow: 0 0 10px rgb(255, 102, 0);
@@ -66,11 +68,43 @@ label {
 #inputMorse::placeholder {
     font-size: 30px;
     color: brown;
-    
 }
 #outputMorse {
     font-size: 30px;
 }
 #outputMorse::placeholder {
     color: brown;
+}
+#inputArea{
+    display: inline;
+}
+#outputArea{
+    display: inline;
+}
+@media only screen and (max-width: 576px) {
+    #translatorContainer {
+        width: 90%;
+    }
+    #inputMorse, #outputMorse {
+        width: 80%;
+        height: 12rem;
+    }
+    body {
+        margin: 0.5rem;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    label {
+        font-size: 22px;
+    }
+    #inputMorse, #outputMorse {
+        font-size: 20px;
+    }
+    #inputMorse::placeholder {
+        font-size: 20px;
+    }
+    #outputMorse {
+        font-size: 20px;
+    }
 }
