@@ -2,9 +2,13 @@
 <html lang="es">
   <head>
     <title>Morse Code Translator</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com" />
@@ -17,31 +21,36 @@
       rel="stylesheet" />
     <link
       rel="stylesheet"
-      href="style.css" />
+      href="/src/styles/style.css" />
     <link
       rel="shortcut icon"
-      href="./icon/codigo-morse.png"
+      href="/public/codigo-morse.png"
       type="image/x-icon" />
   </head>
   <body>
     <section id="translatorContainer">
       <h1>Morse Code Translator</h1>
       <section id="flexContainer">
-        <div id="inputArea">
-          <label>Latin Alphabet</label>
+        <div class="textAreaContainer">
+          <div class="labelContainer">
+            <label for="inputMorse">Latin Alphabet</label>
+            <button id="buttonCopyLatin">Copy</button>
+          </div>
           <textarea
-            id="inputMorse"
-            placeholder="Put text here..."></textarea>
+            id="latinInput"
+            placeholder="Latin to morse..."></textarea>
         </div>
-        <div id="outputArea">
-          <label>Result</label>
+        <div class="textAreaContainer">
+          <div class="labelContainer"> 
+            <label for="outputMorse">Morse Code</label>
+            <button id="buttonCopyMorse">Copy</button>
+          </div>
           <textarea
-            id="outputMorse"
-            placeholder="¯\_(ツ)_/¯"
-            readonly></textarea>
+            id="morseInput"
+            placeholder="Morse to Latin..."></textarea>
         </div>
       </section>
     </section>
-    <script src="main.js"></script>
+    <script type="module" src="/src/app.js"></script>
   </body>
 </html>

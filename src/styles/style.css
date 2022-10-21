@@ -68,14 +68,32 @@ body {
   flex-wrap: wrap;
   width: 100%;
 }
-#flexContainer label {
-  display: block;
-  margin: 1rem auto;
-  padding: 0.5rem;
+#flexContainer .labelContainer {
+  display: flex;
+  margin: 0 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+#flexContainer .labelContainer label {
+  margin: 1rem;
   color: var(--secondary-text-color);
   font-size: 2rem;
 }
-#flexContainer div {
+#flexContainer .labelContainer button {
+  margin: 1rem;
+  background-color: var(--textarea-background);
+  color: var(--primary-text-color);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+#flexContainer .labelContainer button:hover {
+  background-color: var(--primary-text-color);
+  color: var(--textarea-background);
+  transition: background-color 0.3s ease;
+}
+#flexContainer .textAreaContainer {
   flex: auto;
 }
 #flexContainer textarea {
@@ -83,7 +101,7 @@ body {
   border-radius: 0.3rem;
   background: var(--textarea-background);
   color: var(--primary-text-color);
-  resize: none;
+  resize: vertical;
   font-size: 1.875rem;
   font-family: "Play", sans-serif;
   outline: none;
@@ -103,6 +121,6 @@ body {
     font-size: 2rem;
   }
   #flexContainer textarea {
-    min-height: 20rem;
+    height: 20rem;
   }
 }
