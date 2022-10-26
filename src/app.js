@@ -9,10 +9,11 @@ const morseToLatin = e => {
     const charsMorse = e.target.value.split(" ")
 
     charsMorse.map(char => {
-        for (const latin in dataBase) {
-            const morseData = dataBase[latin];
+
+        Object.entries(dataBase).map(([latin, morseData]) => {
             if (char === morseData) latinInput.value += latin
-    }
+        })
+
     })
 }
 
@@ -26,6 +27,7 @@ const latinToMorse = e => {
     const charsLatin = characters.split("")
 
     charsLatin.map(char => {
+        
         if (dataBase[char]) morseInput.value += dataBase[char] + " "
     })
 }
